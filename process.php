@@ -6,7 +6,7 @@ $card = $_GET['card'];
 if (isset($card)) {
 	$timestamp = strftime("%Y-%m-%d %H:%M:%S", time());
 
-	$sql = "INSERT INTO rfids (card, created) VALUES ('{$card}', '{$timestamp}')";
+	$sql = "INSERT INTO rfids (card, reg_date) VALUES ('{$card}', '{$timestamp}')";
 
 	if ($conn->query($sql) === TRUE) {
 	    echo "New record created successfully";
